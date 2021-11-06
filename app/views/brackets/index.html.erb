@@ -12,6 +12,8 @@
   <tbody>
     <% @brackets.each do |bracket| %>
       <tr>
+        <h1><%= bracket.name %></h1>
+        <h1><%= bracket.description %></h1>
         <td><%= link_to 'Show', bracket %></td>
         <td><%= link_to 'Edit', edit_bracket_path(bracket) %></td>
         <td><%= link_to 'Destroy', bracket, method: :delete, data: { confirm: 'Are you sure?' } %></td>

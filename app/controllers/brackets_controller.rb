@@ -64,6 +64,6 @@ class BracketsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def bracket_params
-      params.fetch(:bracket, {})
+      params.require(:bracket).permit(:name, :description)
     end
 end
