@@ -64,6 +64,6 @@ class RoundsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def round_params
-      params.fetch(:round, {})
+      params.require(:round).permit(:name)
     end
 end
