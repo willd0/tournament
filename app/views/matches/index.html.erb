@@ -12,6 +12,7 @@
   <tbody>
     <% @matches.each do |match| %>
       <tr>
+        <h1><%= match.name %></h1>
         <td><%= link_to 'Show', match %></td>
         <td><%= link_to 'Edit', edit_match_path(match) %></td>
         <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
